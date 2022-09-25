@@ -56,6 +56,8 @@ Route::get('/submitBlotter/blotterLetter/{id}', [BlotterReportController::class,
 Route::get('/deleteRequest/{id}', [CertificateController::class, 'deleteRequest']);
 
 Route::get('/home', [HomeController::class, 'home']);
+Route::get('/index', [HomeController::class, 'index']);
+
 Route::get('/adminLoginPage', function () {
   return view('adminLoginPage');
   // Auth::guard('brgy_official')->user();

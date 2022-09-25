@@ -36,6 +36,7 @@
   <script src="js/autocomplete.js"></script>
 
 </head>
+@include('partials.header')
 {{-- <!--Header_section-->
 <header class="header sticky-top">
   <div class="container">
@@ -199,6 +200,7 @@
     </div>
   </div>
 </form>
+
 
 <script>
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -412,11 +414,4 @@
     }
   }
 </script>
-
-<footer class="page-footer font-small mdb-color darken-3 pt-5">
-  <div class="copyright">
-  </div>
-</footer>
-</body>
-
-</html>
+@include('partials.footer')

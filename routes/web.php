@@ -55,8 +55,8 @@ Route::get('/submitBlotter/blotterLetter/{id}', [BlotterReportController::class,
 //Delete Data from Request
 Route::get('/deleteRequest/{id}', [CertificateController::class, 'deleteRequest']);
 
+// Route::get('/home', [HomeController::class, 'home']);
 Route::get('/home', [HomeController::class, 'home']);
-Route::get('/index', [HomeController::class, 'index']);
 
 Route::get('/adminLoginPage', function () {
   return view('adminLoginPage');
@@ -90,41 +90,41 @@ Route::post('/registration', [UserController::class, 'acceptRegistration']);
 //View Residents Registration
 Route::get('/viewRegistration/{id}', [UserController::class, 'viewRegistration']);
 
-//View Form Add Barangay Official 
+//View Form Add Barangay Official
 Route::get('/official', [BarangayOfficialController::class, 'official']);
 
-//Store Data of Barangay Official 
+//Store Data of Barangay Official
 Route::post('/storeOfficial', [BarangayOfficialController::class, 'storeOfficial']);
 
-//Edit Form Barangay Official 
+//Edit Form Barangay Official
 Route::get('/editBarangayOfficial/{id}', [BarangayOfficialController::class, 'editOfficial']);
 
-//Update Data from Barangay Official 
+//Update Data from Barangay Official
 Route::put('/updateBarangayOfficial/{official}', [BarangayOfficialController::class, 'updateOfficial']);
 
 //Delete Data from barangay Official
 Route::get('/deleteBarangayOfficial/{id}', [BarangayOfficialController::class, 'deleteOfficial']);
 
-//View Residents in Admin 
+//View Residents in Admin
 Route::get('/viewResidents/{id}', [AdminResidentsController::class, 'viewResidents']);
 
 
 //Admin Residents  Form
 Route::get('/residents', [AdminResidentsController::class, 'residents']);
 
-//Search Residents 
+//Search Residents
 Route::get('/residents', [AdminResidentsController::class, 'search_residents']);
 
-//Store Data from Admin Residents 
+//Store Data from Admin Residents
 Route::post('/residents', [AdminResidentsController::class, 'adminStore']);
 
-//Delete Data from Admin Residents 
+//Delete Data from Admin Residents
 Route::get('/deleteResidents/{id}', [AdminResidentsController::class, 'deleteResidents']);
 
-//Show Edit Form from Admin Residents 
+//Show Edit Form from Admin Residents
 Route::get('/residents/{residents}/edit', [AdminResidentsController::class, 'editResidents']);
 
-//Update Data from Admin Residents 
+//Update Data from Admin Residents
 Route::put('/residents/{residents}', [AdminResidentsController::class, 'updateResidents']);
 
 
@@ -143,10 +143,10 @@ Route::post('/adminLogin/auth', [BarangayOfficialController::class, 'adminLogin'
 //Log User Out
 Route::post('/logout', [BarangayOfficialController::class, 'logout']);
 
-//Settings 
+//Settings
 Route::get('/settings', [SettingsController::class, 'settings']);
 
-//Update Settings 
+//Update Settings
 Route::put('/settings/{setting}', [SettingsController::class, 'updateSettings']);
 
 //Residency
@@ -179,13 +179,13 @@ Route::get('/blotter', [BlotterReportController::class, 'blotter']);
 //Records
 Route::get('/reports-folders', [AdminResidentsController::class, 'folders']);
 
-// User Profiling 
+// User Profiling
 Route::get('/profiling', [ProfilingController::class, 'profiling']);
 
-// Admin Senior Profiling 
+// Admin Senior Profiling
 Route::get('/seniorProfiling', [ProfilingController::class, 'seniorProfiling']);
 
-// Admin Voters Profiling 
+// Admin Voters Profiling
 Route::get('/votersProfiling', [ProfilingController::class, 'votersProfiling']);
 
 
@@ -201,7 +201,7 @@ Route::get('/activitylog', [UserController::class, 'activityLog']);
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-//Announcements 
+//Announcements
 Route::get('/announcements', [AnnouncementsController::class, 'announcements']);
 
 //Store Announcements

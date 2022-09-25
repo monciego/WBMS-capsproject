@@ -1,696 +1,715 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>WBMS | Paloyon Oriental</title>
-@foreach($setting as $settings)
-<link rel="icon" href="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}">
-@endforeach
-<link href="{{url('assets/css/User/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-<link href="{{url('assets/css/User/style.css')}}" rel="stylesheet" type="text/css"> 
-<link href="{{url('assets/css/User/font-awesome.css')}}" rel="stylesheet" type="text/css"> 
-<link href="{{url('assets/css/User/animation.css')}}" rel="stylesheet" type="text/css">
- 
-<!--[if lt IE 9]>
-    <script src="js/respond-1.1.0.min.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/html5element.js"></script>
-<![endif]-->
- 
-</head>
+@include('partials.header')
 <body>
-  {{-- <div id="fb-root">
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="D0yYpVBE"></script>
-</div> --}}
-  <!--Header_section-->
-<header class="header sticky-top">
-  <div class="container">
-    <div class="header_box">
-      <div class="logo">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto"> 
         @foreach($setting as $settings)
-          <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid">       
+        <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid">       
         @endforeach
-      </div>
-	  <nav class="navbar navbar-inverse cusSticky" role="navigation" >
-      <div class="navbar-header">
-        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        </div>
-	    <div id="main-nav" class="collapse navbar-collapse navStyle">
-			<ul class="nav navbar-nav" id="mainNav">
-			  <li class="active"><a href="#hero_section" class="scroll-link">Home</a></li>
-			  <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
-			  <li><a href="#service" class="scroll-link">Services</a></li>
-			  <li><a href="#Portfolio" class="scroll-link">Portfolio</a></li>
-			  <li><a href="#team" class="scroll-link">Officials</a></li>
-			  <li><a href="#contact" class="scroll-link">Contact</a></li>
-        <li><a href="#" class="scroll-link">My Account</a></li>
-			</ul>
-      </div>
-	 </nav>
-    </div>
-  </div>
-</header>
-<!--Header_section--> 
+      </a>
+      {{-- <h1 class="logo me-auto"><a href="index.html">WBMS | Paloyon Oriental</a></h1> --}}
+      <!-- Uncomment below if you prefer to use an image logo -->
 
-<!--Hero_Section-->
-<section id="hero_section" class="top_cont_outer">
-  <div class="hero_wrapper">
-    <div class="container">
-      <div class="hero_section">
-        <div class="row">
-          <div class="col-lg-5 col-sm-7">
-            <div class="top_left_cont zoomIn wow animated"> 
-              <h2><strong>WEB-BASED MANAGEMENT SYSTEM OF BARANGAY PALOYON ORIENTAL</strong></h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text  printer took a galley of type and scrambled it to make a type specimen.</p>
-              <a href="#service" class="read_more2">Read more</a> </div>
-          </div>
-          <div class="col-lg-7 col-sm-5">
-            @foreach($setting as $settings)
-            <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="70%" style="float: right; padding-top: 10%;">       
-            @endforeach
-    		  </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Hero_Section--> 
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Officials</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          {{-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> --}}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
 
-<section id="aboutUs"><!--Aboutus-->
-<div class="inner_wrapper">
-  <div class="container">
-    <h2>About Us</h2>
-    <div class="inner_section">
-	<div class="row">
-      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">@foreach($setting as $settings)
-        <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-circle delay-03s animated wow zoomIn" alt="">       
-        @endforeach</div>
-      	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
-        	<div class=" delay-01s animated fadeInDown wow animated">
-			<h3>Lorem Ipsum has been the industry's standard dummy text ever..</h3><br/> 
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.PageMaker including versions of Lorem Ipsum.</p> <br/>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged like Aldus PageMaker including versions of Lorem Ipsum.</p>
-</div>
-<div class="work_bottom"> <span>Want to know more..</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
-	   </div>
-      	
-      </div>
-	  
-      
     </div>
-  </div> 
-  </div>
-</section>
-<!--Aboutus--> 
+  </header><!-- End Header -->
 
-<!--Social Media Links-->
-{{-- <section id="aboutUs">
-  <div class="inner_wrapper">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6">
-          
-            <div class="Title1">
-              Follow us on our FB Page
-            </div><br />
-            <div class="fb-post" data-href="https://web.facebook.com/paloyonoriental" data-width="750" data-show-text="false"></div>
-          
-        </div>
-    </div> 
-    </div>
-  </section>
-  <!--Aboutus-->  --}}
-  
-<!--Service-->
-<section  id="service">
-  <div class="container">
-    <h2>Services</h2>
-    <div class="service_wrapper">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="service_block">
-            <div class="service_icon delay-03s animated wow  zoomIn"> <span><img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}"></span> </div>
-            <h3 class="animated fadeInUp wow">Certificate of Indigency</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-          <br><br><a href="/request"><button>REQUEST</button></a>
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>WEB-BASED MANAGEMENT SYSTEM</h1>
+          <h2>Paloyon Oriental Nabua Camarines Sur</h2>
+          <h3>"Asenso Barangay Paloyon Oriental"</h3>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
-        <div class="col-lg-3 borderLeft">			
-          <div class="service_block">
-            <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}"></span> </div>
-            <h3 class="animated fadeInUp wow">Certificate of Residency</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-            <br><br><a href="/request"><button>REQUEST</button></a>
-          </div>
-        </div>
-        <div class="col-lg-3 borderLeft">
-          <div class="service_block">
-            <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}"></span> </div>
-            <h3 class="animated fadeInUp wow">Barangay Clearance</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-            <br><br><a href="/request"><button>REQUEST</button></a>
-          </div>
-        </div>
-        <div class="col-lg-3 borderLeft">
-          <div class="service_block">
-            <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}"></span> </div>
-            <h3 class="animated fadeInUp wow">Report Blotter</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-            <br><br><a href="{{url('/residentBlotter')}}"><button>REPORT</button></a>
-          </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets2/img/hero-img.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!--Service-->
 
+  </section><!-- End Hero -->
 
+  <main id="main">
 
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
 
-<!-- Portfolio -->
-<section id="Portfolio" class="content"> 
-  
-  <!-- Container -->
-  <div class="container portfolio_title"> 
-    
-    <!-- Title -->
-    <div class="section-title">
-      <h2>Portfolio</h2>
-    </div>
-    <!--/Title --> 
-    
-  </div>
-  <!-- Container -->
-  
-  <div class="portfolio-top"></div>
-  
-  <!-- Portfolio Filters -->
-  <div class="portfolio"> 
-    
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a id="all" href="#" data-filter="*" class="active">
-          <h5>Zone 1</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".prototype">
-          <h5>Zone 2</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".design">
-          <h5>Zone 3</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".android">
-          <h5>Zone 4</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".appleIOS">
-          <h5>Zone 5</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".web">
-          <h5>Zone 6</h5>
-          </a></li>
-      </ul>
-    </div>
-    <!--/Portfolio Filters --> 
-    
-    <!-- Portfolio Wrapper -->
-    <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper"> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   appleIOS isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b12.jpg')}}"  alt="Portfolio 1"> </div>        
-        <div class="item_overlay">
-          <div class="item_info"> 
-            <h4 class="project_name">Zone 1</h4>
-          </div>
+        <div class="text-center title">
+          <h3>What we have achieved so far</h3>
+          <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
         </div>
-        </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item-->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b4.jpg')}}" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <div class="item_info"> 
-            <h4 class="project_name">Zone 2</h4>
-          </div>
-        </div>
-      </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design  isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b9.jpeg')}}" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <div class="item_info"> 
-            <h4 class="project_name">Zone 3</h4>
-          </div>
-        </div>
-      </div>
-      <!--/Portfolio Item--> 
-      
-      <!-- Portfolio Item-->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  android  prototype web isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b9.jpeg')}}" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <div class="item_info"> 
-            <h4 class="project_name">Zone 4</h4>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b4.jpg')}}" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <div class="item_info"> 
-            <h4 class="project_name">Zone 5</h4>
-          </div>
-        </div>
-      </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b12.jpg')}}" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <div class="item_info"> 
-            <h4 class="project_name">Zone 6</h4>
-          </div>
-        </div>
-      </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item  -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design web isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b6.jpg')}}" alt="Portfolio 1"> </div>       
-        <div class="item_overlay">
-          <div class="item_info"> 
-            <h4 class="project_name">Zone 7</h4>
-          </div>
-        </div>
-       </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   android isotope-item">
-        <div class="portfolio_img"> <img src="{{url('assets/images/imgUser/b8.jpg')}}" alt="Portfolio 1"> </div>       
-        <div class="item_overlay">
-          <div class="item_info"> 
-				<h4 class="project_name">Zone 8</h4>
-          </div>
-        </div>
-        </a> </div>
-      <!--/Portfolio Item --> 
-      
-    </div>
-    <!--/Portfolio Wrapper --> 
-    
-  </div>
-  <!--/Portfolio Filters -->
-  
-  <div class="portfolio_btm"></div>
-  
-  
-  <div id="project_container">
-    <div class="clear"></div>
-    <div id="project_data"></div>
-  </div>
- 
-  
-</section>
-<!--/Portfolio --> 
 
-{{-- <section class="page_section" id="clients"><!--page_section-->
-  <h2>Clients</h2>
-<!--page_section-->
-<div class="client_logos"><!--client_logos-->
-  <div class="container">
-    <ul class="fadeInRight animated wow">
-      <li><a href="javascript:void(0)"><img src="{{url('assets/images/imgUser/client_logo1.png')}}" alt=""></a></li> 
-      <li><a href="javascript:void(0)"><img src="{{url('assets/images/imgUser/client_logo1.png')}}" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="{{url('assets/images/imgUser/client_logo1.png')}}" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="{{url('assets/images/imgUser/client_logo1.png')}}" alt=""></a></li>
-    </ul>
-  </div>
-</div>
-</section>
-<!--client_logos--> --}}
+        <div class="row counters position-relative">
 
-<section class="page_section team" id="team"><!--main-section team-start-->
-  <div class="container">
-    <h2>Barangay Officials</h2>
-    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing.</h6>
-    <div class="team_section clearfix">
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-03s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/man.png')}}" alt=""> 
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>No.of Residents</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Voters</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Non-Voters</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Senior Citizen</p>
+          </div>
+
         </div>
-        <h3 class="wow fadeInDown delay-03s">Rafael Folloso</h3>
-        <span class="wow fadeInDown delay-03s">Barangay Captain</span>
-        <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+
       </div>
-      <div class="team_area">
-        <div class="team_box  wow fadeInDown delay-06s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/a6.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
         </div>
-        <h3 class="wow fadeInDown delay-06s">Sherrey Tagongtong</h3>
-        <span class="wow fadeInDown delay-06s">Barangay Secretary</span>
-        <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
       </div>
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/woman.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Lorna Muhi</h3>
-        <span class="wow fadeInDown delay-09s">Barangay Treasurer</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/a4.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Michael Angelo</h3>
-        <span class="wow fadeInDown delay-09s">Barangay Councilor</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/a6.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Lee Min Ho</h3>
-        <span class="wow fadeInDown delay-09s">Barangay Councilor</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/man.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Selena Gomez</h3>
-        <span class="wow fadeInDown delay-09s">Barangay Councilor</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>     <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/woman.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Katty Perry</h3>
-        <span class="wow fadeInDown delay-09s">Barangay Councilor</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>     <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/a6.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Taylor Swift</h3>
-        <span class="wow fadeInDown delay-09s">Barangay Councilor</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>     <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="{{url('assets/images/imgUser/woman.png')}}" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Justin Bieber</h3>
-        <span class="wow fadeInDown delay-09s">Barangay Councilor</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/Team-->
-<!--Footer-->
-<footer class="footer_wrapper" id="contact">
-  <div class="container">
-    <section class="page_section contact" id="contact">
-      <div class="contact_section">
-        <h2>Contact Us</h2>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
         <div class="row">
-          <div class="col-lg-4">
-            
-          </div>
-          <div class="col-lg-4">
-           
-          </div>
-          <div class="col-lg-4">
-          
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 wow fadeInLeft">	
-		 <div class="contact_info">
-                            <div class="detail">
-                                <h4>Barangay Paloyon Oriental</h4>
-                                <p>Nabua Camarines Sur</p>
-                            </div>
-                            <div class="detail">
-                                <h4>call us</h4>
-                                <p>+1 234 567890</p>
-                            </div>
-                            <div class="detail">
-                                <h4>Email us</h4>
-                                <p>paloyonoriental@gmail.com</p>
-                            </div> 
-                        </div>
-       		  
-			  
-          
-          <ul class="social_links">
-            <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-            <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-            <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
-            <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li> 
-          </ul>
-        </div>
-        <div class="col-lg-8 wow fadeInLeft delay-06s">
-          <div class="form">
-            <input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-            <input class="input-btn" type="submit" value="send message">
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-{{--  Modal--}}
 
- <!-- Modal -->
- <div id="residentBlotter" class="modal fade">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-          {{-- <h5 class="modal-title" id="barangayIndigency">Mode of Payment</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-          </button> --}}
-      </div>
-      <div class="modal-body">
-        <form action="{{url('residentBlotter')}}">
-            {{-- <div class="form-group">
-              <label>Payment Method</label>
-              <input type="text" class="form-control" name="date" value="{{$indigency->paymentMethod}}" disabled>
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3><strong>Vision, Mission & Goals</strong></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Vision<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Mission <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Goals<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
           </div>
-            <div class="form-group">
-              <label>Pick Up Date</label>
-              <input type="text" class="form-control" name="date" value="{{$indigency->date}}" disabled>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets2/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets2/img/skills.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+
+            <div class="skills-content">
+
+              <div class="progress">
+                <span class="skill">HTML <i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">CSS <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">JavaScript <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Photoshop <i class="val">55%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
             </div>
-            <div class="form-group">
-                <label>Purpose</label>
-                <textarea class="form-control" placeholder="Enter Payment Details" name="details" disabled>{{$indigency->purpose}}</textarea>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-male"></i></div>
+              <h4 style="font-size: 22px">Certificate of Indigency</h4>
+              <p>Certificate of Indigency is issued to less fortunate resident who desires to avail assistance such as Scholarship, Medical Services, Free Legal Aid from Public Attorney&#39;s Office (PAO) and the like.</p>
+              <a href="/request"><button class="b1">REQUEST</button></a>
             </div>
-            <div class="form-group">
-              <label>Reference Number</label>
-              <input type="text" class="form-control" name="date" value="{{$indigency->referenceNumber}}" disabled>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxs-building-house"></i></div>
+              <h4 style="font-size: 22px">Certificate of Residency</h4>
+              <p>Certificate of Residency is a certificate which certifies the fact of residency taking a particular person in the sense that a concerned person actually resides or belongs to a particular place or country</p>
+              <a href="/request"><button class="b1">REQUEST</button></a>
             </div>
-            <div class="form-group">
-              <label>Screenshot of Proof</label>
-              <div id="image-show-area">
-                <img src="{{$indigency->screenshot ? asset ('storage/' .$indigency->screenshot) : asset('/storage/images/-image.png')}}" alt="screenshot" style="width: 100%"  />
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4>Barangay Clearance</h4>
+              <p>Barangay Clearance is used to certify a person with good moral character and a law-abiding citizen of a certain barangay. This is commonly required in processing legal/financial transactions. </p>
+              <a href="/request"><button class="b1">REQUEST</button></a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxs-report"></i></div>
+              <h4>Blotter</h4>
+              <p>If you are a victim of crime or felony, it is wise to report with the barangay and police authorities. Thereafter, you must secure a barangay blotter and police blotter or report so that you may use them as evidences.</p>
+              <a href="{{url('/residentBlotter')}}"><button class="b1">REPORT</button></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Call To Action</h3>
+            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li>
+          <li data-filter=".filter-web">Web</li>
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets2/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets2/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets2/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets2/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets2/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets2/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets2/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets2/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets2/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets2/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Barangay Officials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets2/img/team/team-4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Barangay Captain</span>
               </div>
             </div>
-            <div class="modal-footer">
-                <input type="hidden" name="name" value="---">
-                <a class="btn btn-danger" class="close" data-dismiss="modal" aria-label="Close">Decline</a>                        
-                <button type="submit" class="btn btn-primary">Approve</button>
-            </div> --}}
-        </form>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets2/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Secretary</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets2/img/team/team-2.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>Treasurer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets2/img/team/team-1.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Barangay Councilor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-     </div>
-  </div>  
-  {{-- <script>
-    setTimeout(function(){ openModal(); }, 1000);
-</script> --}}
-</div>
+    </section><!-- End Team Section -->
 
- <div class="modal fade" id="residentBlotter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Manage Blotter</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>Free Plan</h3>
+              <h4><sup>$</sup>0<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
+            </div>
           </div>
-          <div class="modal-body">
-              <form method="POST" action="" >
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Complainant</label>
-                              <input type="text" class="form-control" placeholder="Enter Complainant Name" name="complainant" required>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Respondent</label>
-                              <input type="text" class="form-control" placeholder="Enter Respondent Name" name="respondent" required>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Victim(s)</label>
-                              <input type="text" class="form-control" placeholder="Enter Victim(s) Name" name="victim" required>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Type</label>
-                              <select class="form-control" name="type">
-                                  <option disabled selected>Select Blotter Type</option>
-                                  <option value="Amicable">Amicable</option>
-                                  <option value="Incident">Incident</option>
-                              </select>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Location</label>
-                              <input type="text" class="form-control" placeholder="Enter Location" name="location" required>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Date</label>
-                              <input type="date" class="form-control" name="date" value="<?= date('Y-m-d'); ?>" required>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Time</label>
-                              <input type="time" class="form-control" name="time" required>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Status</label>
-                              <select class="form-control" name="status">
-                                  <option disabled selected>Select Blotter Status</option>
-                                  <option value="Active">Active</option>
-                                  <option value="Settled">Settled</option>
-                                  <option value="Scheduled">Scheduled</option>
-                              </select>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <label>Details</label>
-                      <textarea class="form-control" placeholder="Enter Blotter or Incident here..." name="details" required></textarea>
-                  </div>
-              
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <h3>Business Plan</h3>
+              <h4><sup>$</sup>29<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
+            </div>
           </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Save</button>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>Developer Plan</h3>
+              <h4><sup>$</sup>49<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
+            </div>
           </div>
-          </form>
+
+        </div>
+
       </div>
-  </div>
-</div>
+    </section><!-- End Pricing Section -->
 
-{{--  --}}
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
 
-  <div class="container">
-    <div class="footer_bottom"><span>Copyright © 2022</a>. </span> </div>
-  </div>
-</footer>
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                </p>
+              </div>
+            </li>
 
-<script type="text/javascript" src="{{url('assets/js/User/jquery-1.11.0.min.js')}}"></script>
-<script type="text/javascript" src="{{url('assets/js/User/bootstrap.min.js')}}"></script>
-<script type="text/javascript" src="{{url('assets/js/User/jquery-scrolltofixed.js')}}"></script>
-<script type="text/javascript" src="{{url('assets/js/User/jquery.nav.js')}}"></script> 
-<script type="text/javascript" src="{{url('assets/js/User/jquery.easing.1.3.js')}}"></script>
-<script type="text/javascript" src="{{url('assets/js/User/jquery.isotope.js')}}"></script>
-<script type="text/javascript" src="{{url('assets/js/User/wow.js')}}"></script> 
-{{-- <script type="text/javascript" src="{{url('assets/js/User/custom.js')}}"></script> --}}
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
 
-</body>
-</html>
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Paloyon Oriental Nabua Camarines Sur</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>paloyonoriental@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+63 9091389911</p>
+              </div>
+
+              <iframe src="https://mapcarta.com/36015612/Map" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+@include('partials.footer')

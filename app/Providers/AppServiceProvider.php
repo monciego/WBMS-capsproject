@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
     Paginator::useBootstrapFive();
 
     // !! SHARING the setting to all view
-    // !! WITHOUT checking if table exist will destroy 
+    // !! WITHOUT checking if table exist will destroy
     // !! the migration process
 
     if (Schema::hasTable('settings')) {

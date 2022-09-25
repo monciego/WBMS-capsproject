@@ -1,4 +1,4 @@
-@include('partials.header')
+@include('partials.headeradmin')
 <div class="wrapper">
   <nav class="topnav navbar navbar-light">
     <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
@@ -54,17 +54,17 @@
       <div class="w-100 mb-4 d-flex">
         {{-- @foreach($setting as $settings)
         <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
-        <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="70%">       
+        <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="70%">
         </a>
         @endforeach --}}
         @foreach($setting as $settings)
         <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
-          <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="70%">       
+          <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="70%">
           <p>{{$settings->barangay_name}}</p>
         </a>
         @endforeach
       </div>
-     
+
       <ul class="navbar-nav flex-fill w-100 mb-2">
         <li class="nav-item dropdown">
           <a href="/dashboard" aria-expanded="false" class="nav-link">
@@ -379,4 +379,4 @@
     </div>
   </main> <!-- main -->
 </div> <!-- .wrapper -->
-@include('partials.footer')
+@include('partials.footeradmin')

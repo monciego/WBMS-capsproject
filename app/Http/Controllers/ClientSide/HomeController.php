@@ -19,9 +19,7 @@ class HomeController extends Controller
     public function home(){
         return view ('user.home');
     }
-    public function index(){
-        return view ('user.index');
-    }
+
     public function resident_news(){
 
         if (!session()->has("resident")) {
@@ -32,7 +30,7 @@ class HomeController extends Controller
     }
 
     public function resident_info(){
-        
+
         if (!session()->has("resident")) {
             return redirect("/barangay/login");
         }

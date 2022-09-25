@@ -150,7 +150,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -280,7 +280,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -397,7 +397,7 @@ h6 {
   width: 100%;
   height: 90vh;
   background: #002c79;
-  
+
 }
 
 #hero .container {
@@ -463,7 +463,7 @@ h6 {
 
 #hero .btn-watch-video:hover i {
   color: #47b2e4;
-  
+
 }
 
 #hero .animated {
@@ -983,7 +983,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(0, 44, 121, 0.9), rgba(0, 44, 121, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(0, 44, 121, 0.9), rgba(0, 44, 121, 0.9)), url("../img/b4.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }

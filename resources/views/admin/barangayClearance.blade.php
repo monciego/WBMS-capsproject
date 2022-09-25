@@ -1,7 +1,6 @@
 @extends('layout.dashboard-layout')
 @section('content')
 
-
 <div class="main-panel">
   <div class="content">
     <div class="panel-header bg-primary-gradient">
@@ -32,7 +31,7 @@
               <div class="d-flex flex-wrap justify-content-around" style="border-bottom:1px solid blue">
                 <div class="text-center">
                   @foreach($setting as $settings)
-                  <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="100" style="padding-bottom: 15%">       
+                  <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="100" style="padding-bottom: 15%">
                   @endforeach
                 </div>
                 <div class="text-center">
@@ -45,7 +44,7 @@
                 </div>
                 <div class="text-center">
                   @foreach($setting as $settings)
-                  <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="100" style="padding-bottom: 15%">       
+                  <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="100" style="padding-bottom: 15%">
                   @endforeach
                 </div>
               </div>

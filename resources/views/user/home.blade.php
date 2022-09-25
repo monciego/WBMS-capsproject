@@ -5,9 +5,9 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto"> 
+      <a href="index.html" class="logo me-auto">
         @foreach($setting as $settings)
-        <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid">       
+        <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid">
         @endforeach
       </a>
       {{-- <h1 class="logo me-auto"><a href="index.html">WBMS | Paloyon Oriental</a></h1> --}}
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets2/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="assets2/img/b4.jpg" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>

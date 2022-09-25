@@ -17,7 +17,7 @@
                 </div>
                 <div action="/residents" class="form-group col-auto">
                   <label for="search" class="sr-only">Search</label>
-                  <input type="text" class="form-control" id="search" name="search" value="" placeholder="Search"> 
+                  <input type="text" class="form-control" id="search" name="search" value="" placeholder="Search">
                 </div>
               </div>
             </form>
@@ -49,7 +49,7 @@
                   </div>
                 </td>
                 <td href="#showResidentsModal{{$residents->id}}" class="show" data-toggle="modal">{{$residents->first_name}}</td>
-               
+
                 <td href="#showResidentsModal{{$residents->id}}" class="show" data-toggle="modal">{{$residents->middle_name}}</td>
                 <td href="#showResidentsModal{{$residents->id}}" class="show" data-toggle="modal">{{$residents->last_name}}</td>
                 <td href="#showResidentsModal{{$residents->id}}" class="show" data-toggle="modal">{{$residents->nickname}}</td>
@@ -67,12 +67,12 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <form>
-                            <div class="modal-header">						
+                            <div class="modal-header">
                                 <h4 class="modal-title">View Residents</h4>
                                 {{-- <a href="javascript:window.print()" class="btn btn-success waves-effect waves-light"><i class="fa fa print"></i></a> --}}
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             </div>
-                            <div class="modal-body">	
+                            <div class="modal-body">
                                 <div class="page-content page-container" id="page-content">
                                     <div class="padding">
                                         <div class="row container d-flex justify-content-center">
@@ -141,7 +141,7 @@
                                                         <h6 class="text-muted f-w-400">{{$residents->email}}</h6>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <ul class="social-link list-unstyled m-t-40 m-b-10">
                                                     <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
                                                     <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i class="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a></li>
@@ -159,7 +159,7 @@
                             <div class="modal-footer">
                                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Back">
                             </div>
-        
+
                         </form>
                     </div>
                 </div>
@@ -170,13 +170,13 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <form>
-                                <div class="modal-header">						
+                                <div class="modal-header">
                                     <h4 class="modal-title">Delete Residents</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                 </div>
-            
-            
-                                <div class="modal-body">					
+
+
+                                <div class="modal-body">
                                     <p>Are you sure you want to delete these Records?</p>
                                     <p class="text-warning"><small>This action cannot be undone.</small></p>
                                 </div>
@@ -185,7 +185,7 @@
                                     {{-- <input type="submit" href="{{url('deleteResidents', $residents->id)}}" class="btn btn-danger" value="Delete"> --}}
                                     <a class="btn btn-danger" href="{{url('deleteResidents',$residents->id)}}">Delete</a>
                                 </div>
-            
+
                             </form>
                         </div>
                     </div>
@@ -201,42 +201,42 @@
               @csrf
               @method('PUT')
 
-                <div class="modal-header">						
+                <div class="modal-header">
                     <h4 class="modal-title">Edit Residents</h4>
-                    
-             
+
+
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
 
                 <div class="row register-form">
-             
+
                         <div class="modal-body">
                             <div class="form-group">
                             <label class="labelImage">Image</label>
                             <img class="preview" id="preview" src="{{$residents->resident_image ? asset ('storage/' .$residents->resident_image) : asset('/storage/no/-image.png')}}" alt="" />
                             <input type="file"  name="resident_image" id="resident_image2" value="{{$residents->resident_image}}" >
-                          
+
                          </div>
-                        
-                        
+
+
                          @Error('resident_image')
                          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                       @enderror
-                    
+
                         </div>
                     </div>
-                
+
             <div class="row register-form">
                 <div class="col-sm-4">
-                    <div class="modal-body">					
+                    <div class="modal-body">
                         <div class="form-group">
                             <label>First Name</label>
                             <input type="text" class="form-control" name="first_name" value="{{$residents->first_name}}" required autocomplete="first_name">
-                        
+
                             @Error('first_name')
                                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                             @enderror
-                        
+
                         </div>
                     </div>
                 </div>
@@ -254,7 +254,7 @@
 
                     </div>
                 </div>
-            
+
 
             <div class="col-sm-4">
                 <div class="form-group">
@@ -271,7 +271,7 @@
             </div>
         </div>
 
-            
+
 
          <div class="row register-form">
                 <div class="col-sm-4">
@@ -293,28 +293,28 @@
                         <div class="modal-body">
                         <label>Place of Birth</label>
                         <input type="text" class="form-control" name="place_of_birth" value="{{$residents->place_of_birth}}" required autocomplete="place_of_birth">
-                    </div>	
-                    
+                    </div>
+
                     @Error('place_of_birth')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
-                    
-                    </div>			
+
+                    </div>
                 </div>
 
-                
+
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="modal-body">
                         <label>Birthdate</label>
                         <input type="date" class="form-control" name="birthdate" value="{{$residents->birthdate}}" required autocomplete="birthdate">
-                    </div>	
-                    
+                    </div>
+
                     @Error('birthdate')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                  @enderror
 
-                    </div>			
+                    </div>
                 </div>
 
             </div>
@@ -339,33 +339,33 @@
                         <div class="modal-body">
                         <label>Civil Status</label>
                         <input type="text" class="form-control" name="civil_status" value="{{$residents->civil_status}}" required autocomplete="civil_status">
-                    </div>	
-                    
+                    </div>
+
                     @Error('civil_status')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                  @enderror
 
-                    </div>			
+                    </div>
                 </div>
 
-                
+
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="modal-body">
                         <label>Gender</label>
                         <select class="form-control" id="gender"name="gender" required autocomplete="gender">
-                           
-                          
+
+
                             <option value="Male"{{$residents->gender=="Male" ? 'selected' :''}}>Male</option>
                             <option value="Female"{{$residents->gender=="Female" ? 'selected' :''}}>Female</option>
                         </select>
                     </div>
-                    
+
                     @Error('gender')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                  @enderror
 
-                    </div>			
+                    </div>
                 </div>
 
             </div>
@@ -390,33 +390,33 @@
                         <div class="modal-body">
                         <label>Voter Status</label>
                         <select class="form-control" id="voter_status"name="voter_status" required autocomplete="voter_status">
-                           
-                          
+
+
                             <option value="Voter"{{$residents->voter_status=="Voter" ? 'selected' :''}}>Voter</option>
                             <option value="Non Voter"{{$residents->voter_status=="Non Voter" ? 'selected' :''}}>Non Voter</option>
                         </select>
-                    </div>		
+                    </div>
 
                     @Error('voter_status')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                  @enderror
 
-                    </div>			
+                    </div>
                 </div>
 
-                
+
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="modal-body">
                         <label>Citizenship</label>
                         <input type="text" class="form-control" name="citizenship" value="{{$residents->citizenship}}" required autocomplete="citizenship">
-                    </div>	
-                    
+                    </div>
+
                     @Error('citizenship')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                  @enderror
-                    
-                    </div>			
+
+                    </div>
                 </div>
 
             </div>
@@ -440,28 +440,28 @@
                         <div class="modal-body">
                         <label>Contact Number</label>
                         <input type="text" class="form-control" name="phone_number" value="{{$residents->phone_number}}" required autocomplete="phone_number">
-                    </div>	
-                    
+                    </div>
+
                     @Error('phone_number')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                  @enderror
-                    
-                    </div>			
+
+                    </div>
                 </div>
 
-                
+
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="modal-body">
                         <label>Occupation</label>
                         <input type="text" class="form-control" name="occupation" value="{{$residents->occupation}}" required autocomplete="occupation">
-                    </div>	
-                    
+                    </div>
+
                     @Error('occupation')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                  @enderror
 
-                    </div>			
+                    </div>
                 </div>
 
             </div>
@@ -473,7 +473,7 @@
                 </div>
             </form>
         </div>
-     
+
     </div>
 </div>
 
@@ -484,11 +484,11 @@
           <div class="clearfix">
             {{$resident->links()}}
         </div>
-    
+
         </div>
       </div>
-      
-      
+
+
       <script>
        var loadFile = function(event){
         var resident_image2 = document.getElementByID("resident_image2");
@@ -496,7 +496,7 @@
        }
     </script>
 
-       
+
 {{-------------------------------------------ADD RESIDENTS---------------------------------}}
     <div id="addResidentsModal" class="modal fade">
         <div class="modal-dialog">
@@ -505,40 +505,40 @@
                 <form action="/residents" method="POST" enctype="multipart/form-data" id="image-upload-preview">
                     @csrf
 
-                    <div class="modal-header">						
+                    <div class="modal-header">
                         <h4 class="modal-title">Add Residents</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
 
                     <div class="row register-form">
-                        
+
                             <div class="modal-body">
                                 <div class="form-group">
                                 <label class="labelImage">Image</label>
                                 <img class="preview" id="prview" src="storage/no/-image.png"/>
                                 <input type="file"  name="resident_image" id="resident_image">
                              </div>
-                            
+
                              @Error('resident_image')
                              <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                           @enderror
-                        
-                       
+
+
                         </div>
                     </div>
-                    
-                   
+
+
                 <div class="row register-form">
                     <div class="col-sm-4">
-                        <div class="modal-body">					
+                        <div class="modal-body">
                             <div class="form-group">
                                 <label >First Name</label>
                                 <input type="text" class="form-control" name="first_name" value="{{old('first_name')}}" required autocomplete="first_name">
-                            
+
                                 @Error('first_name')
                                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                                 @enderror
-                            
+
                             </div>
                         </div>
                     </div>
@@ -556,7 +556,7 @@
 
                         </div>
                     </div>
-                
+
 
                 <div class="col-sm-4">
                     <div class="form-group">
@@ -573,7 +573,7 @@
                 </div>
             </div>
 
-                
+
 
              <div class="row register-form">
                     <div class="col-sm-4">
@@ -595,28 +595,28 @@
                             <div class="modal-body">
                             <label>Place of Birth</label>
                             <input type="text" class="form-control" name="place_of_birth" value="{{old('place_of_birth')}}" required autocomplete="place_of_birth">
-                        </div>	
-                        
+                        </div>
+
                         @Error('place_of_birth')
                             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                          @enderror
-                        
-                        </div>			
+
+                        </div>
                     </div>
 
-                    
+
                     <div class="col-sm-4">
                         <div class="form-group">
                             <div class="modal-body">
                             <label>Birthdate</label>
                             <input type="date" class="form-control" name="birthdate" value="{{old('birthdate')}}" required autocomplete="birthdate">
-                        </div>	
-                        
+                        </div>
+
                         @Error('birthdate')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
 
-                        </div>			
+                        </div>
                     </div>
 
                 </div>
@@ -641,16 +641,16 @@
                             <div class="modal-body">
                             <label>Civil Status</label>
                             <input type="text" class="form-control" name="civil_status" value="{{old('civil_status')}}" required autocomplete="civil_status">
-                        </div>	
-                        
+                        </div>
+
                         @Error('civil_status')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
 
-                        </div>			
+                        </div>
                     </div>
 
-                    
+
                     <div class="col-sm-4">
                         <div class="form-group">
                             <div class="modal-body">
@@ -661,12 +661,12 @@
                                 <option value="Female">Female</option>
                             </select>
                         </div>
-                        
+
                         @Error('gender')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
 
-                        </div>			
+                        </div>
                     </div>
 
                 </div>
@@ -695,62 +695,62 @@
                                 <option value="Voter">Voter</option>
                                 <option value="Non Voter">Non Voter</option>
                             </select>
-                        </div>		
+                        </div>
 
                         @Error('voter_status')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
 
-                        </div>			
+                        </div>
                     </div>
 
-                    
+
                     <div class="col-sm-4">
                         <div class="form-group">
                             <div class="modal-body">
                             <label>Citizenship</label>
                             <input type="text" class="form-control" name="citizenship" value="{{old('citizenship')}}" required autocomplete="citizenship">
-                        </div>	
-                        
+                        </div>
+
                         @Error('citizenship')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
-                        
-                        </div>			
+
+                        </div>
                     </div>
 
                 </div>
 
                 <div class="row register-form">
-                   
+
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <div class="modal-body">
                             <label>Contact Number</label>
                             <input type="text" class="form-control" name="phone_number" value="{{old('contact_number')}}" required autocomplete="contact_number">
-                        </div>	
-                        
+                        </div>
+
                         @Error('phone_number')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
-                        
-                        </div>			
+
+                        </div>
                     </div>
 
-                    
+
                     <div class="col-sm-6">
                         <div class="form-group">
                             <div class="modal-body">
                             <label>Occupation</label>
                             <input type="text" class="form-control" name="occupation" value="{{old('occupation')}}" required autocomplete="occupation">
-                        </div>	
-                        
+                        </div>
+
                         @Error('occupation')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                      @enderror
 
-                        </div>			
+                        </div>
                     </div>
 
                 </div>
@@ -783,29 +783,29 @@
                 </div>
 
 
-             
+
 
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
                         <input type="submit" class="btn btn-success" value="Add">
                     </div>
-                    
+
                 </form>
-                
+
             </div>
-          
-            
+
+
    </div>
 
         </div>
-    </div> 
-  </div> 
+    </div>
+  </div>
   <script>
     resident_image.onchange = evt => {
       const [file] = resident_image.files
       if (file) {
         prview.style.visibility = 'visible';
-    
+
         prview.src = URL.createObjectURL(file)
       }
     }

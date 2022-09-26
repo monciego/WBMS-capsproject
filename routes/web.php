@@ -38,6 +38,7 @@ Route::middleware(['brgy_official'])->group(function () {
   Route::get('dashboard', [AdminResidentsController::class, 'dashboard']);
 });
 
+
 // Barangay Clearance
 // Route::get('/brgyClearance', [CertificateController::class, 'brgyClearance']);
 

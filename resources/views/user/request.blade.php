@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=de  
+  <meta name="viewport" content="width=de
 
   <meta charset=" utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,12 +107,12 @@
         </div>
       </div>
       <div class="col-md-6" style="margin-top: 20px; margin-bottom: 20px;">
-        <label for="first_name">Type Your First Name</label>
-        <input type="text" class="form-control" name="first_name" value="" placeholder="Type your first name">
+        <label for="first_name">Type Your Given Name</label>
+        <input type="text" class="form-control" name="first_name" value="" placeholder="Type your given name">
         <label for="middle_name">Type Your Middle Name</label>
         <input type="text" class="form-control" name="middle_name" value="" placeholder="Type your middle name">
-        <label for="last_name">Type Your Last Name</label>
-        <input type="text" class="form-control" name="last_name" value="" placeholder="Type your last name">
+        <label for="last_name">Type Your Surname</label>
+        <input type="text" class="form-control" name="last_name" value="" placeholder="Type your surname">
         <!-- Type of Document -->
         <div class="form-group">
           <label for="exampleFormControlSelect1">Type of Document</label>

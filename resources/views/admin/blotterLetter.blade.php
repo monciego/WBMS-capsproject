@@ -31,7 +31,7 @@
               <div class="d-flex flex-wrap justify-content-around" style="border-bottom:1px solid blue">
                 <div class="text-center">
                   @foreach($setting as $settings)
-                  <img src="{{$settings->barangay_logo ? $settings->barangay_logo : asset('/storage/no/-image.png')}}" class="img-fluid" width="100" style="padding-bottom: 15%">
+                  <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="100" style="padding-bottom: 15%">
                   @endforeach
                 </div>
                 <div class="text-center">
@@ -43,9 +43,9 @@
                   @endforeach
                 </div>
                 <div class="text-center">
-                  @foreach($setting as $settings)
-                  <img src="{{$settings->barangay_logo ?  $settings->barangay_logo : asset('/storage/no/-image.png')}}" class="img-fluid" width="100">
-                  @endforeach
+                  {{-- @foreach($setting as $settings) --}}
+                  <img src="/assets2/img/nbua.png" class="img-fluid" width="100" style="padding-bottom: 15%">
+                  {{-- @endforeach --}}
                 </div>
               </div>
               <div class="row mt-2">
@@ -82,38 +82,40 @@
                                                     <span class=" fw-bold" style="font-size:15px">{{ $blo->location }}</span>
                         </div>
                       </div>
-                      <div class="form-group row">
+
+                    </div>
+                    <div class="col">
+                    <div class="form-group row">
                         <h6 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Time:</h6>
                         <div class="col-lg-8 col-md-8 col-sm-8" style="border-bottom:1px solid black; font-size:20px"">
                                                     <span class=" fw-bold" style="font-size:15px">{{ $blo->time }}</span>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col">
+                        </div>
+
                       <div class="form-group row">
                         <h6 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Respondent:</h6>
                         <div class="col-lg-8 col-md-8 col-sm-8" style="border-bottom:1px solid black; font-size:20px"">
                                                     <span class=" fw-bold" style="font-size:15px">{{ $blo->respondent }}</span>
                         </div>
                       </div>
-                      <div class="form-group row">
+                      {{-- <div class="form-group row">
                         <h6 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Type:</h6>
                         <div class="col-lg-8 col-md-8 col-sm-8" style="border-bottom:1px solid black; font-size:20px"">
                                                     <span class=" fw-bold" style="font-size:15px">{{ $blo->type  }}</span>
                         </div>
-                      </div>
+                      </div> --}}
                       <div class="form-group row">
                         <h6 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Date:</h6>
                         <div class="col-lg-8 col-md-8 col-sm-8" style="border-bottom:1px solid black; font-size:20px"">
                                                     <span class=" fw-bold" style="font-size:15px"> {{ $blo->date }}</span>
                         </div>
                       </div>
-                      <div class="form-group row">
+                      {{-- <div class="form-group row">
                         <h6 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Status:</h6>
                         <div class="col-lg-8 col-md-8 col-sm-8" style="border-bottom:1px solid black; font-size:20px"">
                                                     <span class=" fw-bold" style="font-size:15px">{{ $blo->status }}</span>
                         </div>
-                      </div>
+                      </div> --}}
                     </div>
                   </div>
                   <div class="row">

@@ -122,21 +122,21 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              {{-- <th scope="col">#</th> --}}
               <th scope="col">Name</th>
-              <th scope="col">Size</th>
-              <th scope="col">Type</th>
+              <th scope="col">Date Uploaded</th>
+              {{-- <th scope="col">Type</th> --}}
               <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
             @foreach($files as $file)
             <tr>
-              <td width="3%">{{ $file->id }}</td>
-              <td>{{ $file->name }}</td>
-              <td width="10%">{{ $file->size }}</td>
-              <td width="10%">{{ $file->type }}</td>
-              <td width="25%">
+              {{-- <td width="3%">{{ $file->id }}</td> --}}
+              <td width="40%">{{ $file->name }}</td>
+              <td width="30%">{{ Carbon\Carbon::parse($file->created_at)->format('d-m-Y h:m') }}</td>
+              {{-- <td width="10%">{{ $file->type }}</td> --}}
+              <td width="30%">
                 <a href="{{url('file/'.$file->name)}}"><button class="btns btn1"><i class="fa fa-eye"></i></button></a>
                 @if(!$file->deleted_at)
                 <a href="#deleteFile{{$file->id}}" data-toggle="modal"><button class="btns btn2"><i class="fa fa-trash"></i></button></a>

@@ -27,7 +27,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="avatar avatar-sm mt-2">
-            <img src="./assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded-circle">
+            <img src="/assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded-circle">
           </span>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -83,18 +83,18 @@
 
         <li class="nav-item dropdown">
           <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-            <i class="fa fa-file fe-16"></i>
+            <i class="fa fa-folder-open-o fe-16"></i>
             <span class="ml-3 item-text">Compilation of Reports</span>
           </a>
           <ul class="collapse list-unstyled pl-4 w-100" id="reports">
             <li class="nav-item">
-              <a class="nav-link pl-3" href="../reports/accomplishment"><span class="ml-1 item-text">Accomplishment Report</span></a>
+              <a class="nav-link pl-3" href="../reports/accomplishment"><span class="ml-1 item-text">Accomplishment Reports</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pl-3" href="../reports/financial"><span class="ml-1 item-text">Financial Report</span></a>
+              <a class="nav-link pl-3" href="../reports/financial"><span class="ml-1 item-text">Financial Reports</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pl-3" href="../reports/blotter"><span class="ml-1 item-text">Blotter Report</span></a>
+              <a class="nav-link pl-3" href="../reports/blotter"><span class="ml-1 item-text">Blotter Records</span></a>
             </li>
           </ul>
         </li>
@@ -133,7 +133,7 @@
         <li class="nav-item dropdown">
           <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
             <i class="fa fa-certificate"></i>
-            <span class="ml-3 item-text">Requests</span>
+            <span class="ml-3 item-text">Request Certificates</span>
           </a>
           <ul class="collapse list-unstyled pl-4 w-100" id="tables">
             <li class="nav-item">
@@ -145,11 +145,15 @@
             <li class="nav-item">
               <a class="nav-link pl-3" href="/certificateOfIndigency"><span class="ml-1 item-text">Certificate of Indigency</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link pl-3" href="/blotter"><span class="ml-1 item-text">Blotter Report</span></a>
-            </li>
           </ul>
         </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="/blotter">
+              <i class="fa fa-file fe-16"></i>
+              <span class="ml-3 item-text">Blotter Reports</span>
+            </a>
+          </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link" href="/messages">

@@ -48,13 +48,15 @@
         <tr>
           <td>
             <div class="image-round">
-              <img class="imagePreview" src="{{$clearance->profile_image ? asset ('storage/' .$certificate->profile_image) : asset('/storage/images/-image.png')}}" alt="" />
+              {{-- <img class="imagePreview" src="{{$clearance->profile_image ? asset ('storage/' .$certificate->profile_image) : asset('/storage/images/-image.png')}}" alt="" /> --}}
+              <img class="imagePreview" src="assets/images/imgUser/a6.png" alt="" />
+
             </div>
           </td>
-          <td class="show">{{$clearance->fullname}}</td>
-          <td class="show">{{$clearance->doctype}}</td>
-          <td class="show"><?= date('F j, Y, g:i a') ?></td>
-          <td>
+          <td width="40%" class="show">{{$clearance->fullname}}</td>
+          <td width="20%" class="show">{{$clearance->doctype}}</td>
+          <td width="30%" class="show">{{ Carbon\Carbon::parse($clearance->created_at)->format('d-m-Y h:m') }}</td>
+          <td width="10%">
             @if($clearance->status == 'pending')
             <a href="#editResidentsModal{{$clearance->id}}" class="edit" data-toggle="modal"><button class="btn"><i class="fas fa-eye fa-minimize"></i></button></a>
             @elseif($clearance->status == 'approved')

@@ -39,7 +39,7 @@
         @endif
         <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="/">
           @foreach($setting as $settings)
-          <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="50%">       
+          <img src="{{$settings->barangay_logo ? asset ('storage/' .$settings->barangay_logo) : asset('/storage/no/-image.png')}}" class="img-fluid" width="65%">
           @endforeach
         </a>
         <h1 class="h4 mb-3">Sign in</h1>
@@ -60,7 +60,7 @@
         </div>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
-        <p class="mt-5 mb-3 text-muted">© 2020</p>
+        <p class="mt-5 mb-3 text-muted">© 2022</p>
       </form>
     </div>
   </div>

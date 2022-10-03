@@ -62,7 +62,9 @@ class CertificateController extends Controller
       ->when($request->search, function ($query) use ($request) {
         return $query->where('fullname', 'like', '%' . $request->search . '%');
       })->get();
-    return view('admin.certificateOfClearance', ['clear' => $clear]);
+
+      return view('admin.certificateOfClearance', ['clear' => $clear]);
+      
   }
 
   public function barangayClearance($id)

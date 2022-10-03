@@ -16,7 +16,7 @@ class FilesController extends Controller
 {
   /**
    * Display a listing of the resource.
-   *  
+   *
    * @return \Illuminate\Http\Response
    */
 
@@ -73,7 +73,6 @@ class FilesController extends Controller
     $size = $request->file->getSize();
 
     // rename the file
-    $fileName = md5(uniqid()) . '_' . $fileName;
 
     $request->file->move(public_path('file'), $fileName);
 

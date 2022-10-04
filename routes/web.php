@@ -12,6 +12,7 @@ use App\Http\Controllers\AdminSide\AnnouncementsController;
 use App\Http\Controllers\AdminSide\FilesController;
 use App\Http\Controllers\AdminSide\CertificateController;
 use App\Http\Controllers\AdminSide\UploadFileController;
+use App\Http\Controllers\AdminSide\SMSController;
 use App\Http\Controllers\AdminSide\RequestController;
 use Illuminate\Support\Facades\Auth;
 
@@ -58,6 +59,9 @@ Route::get('/deleteRequest/{id}', [CertificateController::class, 'deleteRequest'
 
 // Route::get('/home', [HomeController::class, 'home']);
 Route::get('/home', [HomeController::class, 'home']);
+
+//Portfolio
+Route::get('/portfolio-details', [HomeController::class, 'brngyportfolio']);
 
 Route::get('/adminLoginPage', function () {
   return view('adminLoginPage');
@@ -227,6 +231,8 @@ Route::get('/deleteFile/{id}', [FilesController::class, 'deletefile']);
 Route::get('/decline-certificate/{id}', [CertificateController::class, 'declineCertificate']);
 Route::get('/decline-blotter/{id}', [BlotterReportController::class, 'declineBlotter']);
 
+//SMS Messages
+Route::any('messages', [SMSController::class, 'send']);
 
 Route::get('logout-all', function () {
   Auth::logout();

@@ -10,4 +10,8 @@ class HomeController extends Controller
   {
     return view('user.home');
   }
+  public function brngyportfolio()
+  {
+    return view('user.portfolio-details');
+  }
 }
